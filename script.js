@@ -1,5 +1,3 @@
-const axios = require('axios');
-
 function toggleMenu() {
   const menu = document.querySelector(".menu-links");
   const icon = document.querySelector(".hamburger-icon");
@@ -7,15 +5,15 @@ function toggleMenu() {
   icon.classList.toggle("open");
 }
 
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-  event.preventDefault();
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault()
   const name = document.getElementById('name').value
-  const email = document.getElementById('email'.value)
+  const email = document.getElementById('email').value
   const message = document.getElementById('message').value
 
   const data = { name, email, message}
 
-  post('https://dttc-api.herokuapp.com/email', data)
+  axios.post('https://dttc-api.herokuapp.com/email', data)
   .then(function(response) {
     console.log('Email sent')
   })
