@@ -191,6 +191,10 @@ section {
   margin: auto 0;
 }
 
+.section__pic-container > img {
+  border-radius: 50%;
+}
+
 .section__text {
   align-self: center;
   text-align: center;
@@ -284,6 +288,15 @@ section {
 
 #about {
   position: relative;
+  height: 50vh;
+}
+
+#about > .title {
+  margin-bottom: 2rem;
+}
+
+#about > .section-container {
+  height: fit-content;
 }
 
 .about-containers {
@@ -295,6 +308,7 @@ section {
 .about-details-container {
   justify-content: center;
   flex-direction: column;
+  height: fit-content;
 }
 
 .about-containers,
